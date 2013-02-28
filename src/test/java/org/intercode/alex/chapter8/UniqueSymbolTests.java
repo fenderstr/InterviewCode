@@ -9,16 +9,29 @@ public class UniqueSymbolTests {
 
     @Test
     public void uniqueTest() {
-        // Входная строка имеет только уникальные символы
         String input = "Abcdefgh";
-        assertTrue(UniqueSymbol.isAllCharUnique(input));
+        assertTrue("Входная строка имеет только уникальные символы",
+                UniqueSymbol.isAllCharUnique(input));
 
-        // Входная строка имеет НЕуникальные символы
         input = "AbcdefgA";
-        assertFalse(UniqueSymbol.isAllCharUnique(input));
+        assertFalse("Входная строка имеет НЕуникальные символы",
+                UniqueSymbol.isAllCharUnique(input));
 
-        // Входная строка имеет НЕуникальные символы разного регистра
         input = "Abcdefga";
-        assertFalse(UniqueSymbol.isAllCharUnique(input, true));
+        assertFalse("Входная строка имеет НЕуникальные символы разного регистра",
+                UniqueSymbol.isAllCharUnique(input, true));
+
+        input = "Abcdefgh";
+        assertTrue("Входная строка имеет только уникальные символы",
+                intercode.scala.chapter8.UniqueSymbol.isAllCharUnique(input));
+
+        input = "AbcdefgA";
+        assertFalse("Входная строка имеет НЕуникальные символы",
+                intercode.scala.chapter8.UniqueSymbol.isAllCharUnique(input));
+
+        input = "Abcdefga";
+        assertFalse("Входная строка имеет НЕуникальные символы разного регистра",
+                intercode.scala.chapter8.UniqueSymbol.isAllCharUnique(input, true));
+
     }
 }

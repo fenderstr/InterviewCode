@@ -9,9 +9,6 @@ package org.intercode.alex.chapter8;
  */
 public class UniqueSymbol {
 
-    public UniqueSymbol() {
-    }
-
     /**
      * Проверка уникальности сиволов входной строки (без учета регистра)
      *

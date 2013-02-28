@@ -1,0 +1,16 @@
+apply plugin: 'java'
+apply plugin: 'scala'
+
+repositories.mavenCentral()
+
+ext {
+	scala = [version: '2.10.0', group: 'org.scala-lang']
+}
+dependencies {
+	scalaTools "${scala.group}:scala-compiler:${scala.version}"
+	scalaTools "${scala.group}:scala-library:${scala.version}"
+
+	compile "${scala.group}:scala-library:${scala.version}"
+
+	testCompile 'junit:junit:4.11'
+}
