@@ -1,5 +1,6 @@
 package org.intercode.alex.chapter8;
 
+import intercode.java.chapter8.UniqueSymbol;
 import org.junit.Test;
 
 import static org.junit.Assert.assertFalse;

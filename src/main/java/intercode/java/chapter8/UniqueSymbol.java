@@ -1,4 +1,4 @@
-package org.intercode.alex.chapter8;
+package intercode.java.chapter8;
 
 /**
  * стр. 63 задание 1.1
