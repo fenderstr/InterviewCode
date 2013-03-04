@@ -34,16 +34,12 @@ object UniqueSymbol {
 
     val lenght: Int = string.length() - 1
     if (lenght >= Byte.MaxValue) return false
+    val cache = new Array[Int](Char.MaxValue)
 
-    for (i <- 0 to lenght) {
-      val symbol: Char = string.charAt(i)
-      val a = i + 1
-      for (j <- a to lenght) {
-        if (symbol == string.charAt(j)) {
-          return false
-        }
-      }
-    }
+    string.foreach(char => {
+      if (cache(char) != 0) return false else cache(char) = 1
+    })
+
     true
   }
 

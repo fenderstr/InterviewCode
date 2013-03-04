@@ -5,9 +5,9 @@ import spock.lang.Specification
 /**
  *
  *
- * @author ANosov
+ * @author anosov@outlook.com
  */
-class UniqueSymbolTest extends Specification {
+class UniqueSymbolTests extends Specification {
 	def "(Java) входная строка имеет только уникальные символы (регистр не учитывается)"() {
 		expect:
 		intercode.java.chapter8.UniqueSymbol.isAllCharUnique(input) == response
