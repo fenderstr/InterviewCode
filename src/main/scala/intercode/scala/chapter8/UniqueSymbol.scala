@@ -32,8 +32,8 @@ object UniqueSymbol {
       if (isCaseSense) input.toLowerCase else input
     }
 
-    val lenght: Int = string.length() - 1
-    if (lenght >= Byte.MaxValue) return false
+    val length: Int = string.length() - 1
+    if (length >= Byte.MaxValue) return false
     val cache = new Array[Int](Char.MaxValue)
 
     string.foreach(char => {
