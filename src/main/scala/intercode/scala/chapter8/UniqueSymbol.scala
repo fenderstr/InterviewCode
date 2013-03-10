@@ -28,19 +28,15 @@ object UniqueSymbol {
    *         false - есть повторяющиеся символы
    */
   def isAllCharUnique(input: String, isCaseSense: Boolean): Boolean = {
-    val string: String = {
-      if (isCaseSense) input.toLowerCase else input
+    val string: String = if (isCaseSense) input.toLowerCase else input
+
+    val length: Int = string.size
+    if (length >= Char.MaxValue) false
+    else {
+      val cache = new Array[Int](Char.MaxValue)
+      val check = (char: Char) => if (cache(char) != 0) return false else cache(char) = 1
+      string.foreach(check(_))
+      true
     }
-
-    val length: Int = string.length() - 1
-    if (length >= Byte.MaxValue) return false
-    val cache = new Array[Int](Char.MaxValue)
-
-    string.foreach(char => {
-      if (cache(char) != 0) return false else cache(char) = 1
-    })
-
-    true
   }
-
 }
