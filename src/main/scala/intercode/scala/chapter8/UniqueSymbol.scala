@@ -30,8 +30,7 @@ object UniqueSymbol {
   def isAllCharUnique(input: String, isCaseSense: Boolean): Boolean = {
     val string: String = if (isCaseSense) input.toLowerCase else input
 
-    val length: Int = string.size
-    if (length >= Char.MaxValue) false
+    if (string.length >= Char.MaxValue) false
     else {
       val cache = new Array[Int](Char.MaxValue)
       val check = (char: Char) => if (cache(char) != 0) return false else cache(char) = 1
